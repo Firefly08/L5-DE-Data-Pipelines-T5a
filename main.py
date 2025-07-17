@@ -26,7 +26,7 @@ def process_country(config):
 
     validation.validate_user_visits(users, logins)
     validation.check_duplicates(users,
-                                subset=['email'],
+                                subset=['first_name', 'surname','dob'],
                                 label=f"{config.get('label')} users")
     validation.validate_email_uniqueness(users,
                                          label=f"{config.get('label')} users")
